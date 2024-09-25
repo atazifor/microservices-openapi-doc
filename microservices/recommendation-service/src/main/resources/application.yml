@@ -1,0 +1,12 @@
+server:
+  port: 7002
+  error:
+    include-message: always
+logging:
+  level:
+    root: info
+    taz.amin: debug
+
+---
+spring.config.activate.on-profile: docker
+server.port: 8080

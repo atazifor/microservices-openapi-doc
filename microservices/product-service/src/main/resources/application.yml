@@ -1,0 +1,13 @@
+server:
+  port: 7001
+logging:
+  level:
+    root: INFO
+    taz.amin.microservices: DEBUG
+spring:
+  application:
+    name: product-service
+
+---
+spring.config.activate.on-profile: docker
+server.port: 8080
