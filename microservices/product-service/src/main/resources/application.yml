@@ -4,10 +4,21 @@ logging:
   level:
     root: INFO
     taz.amin.microservices: DEBUG
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
+    org.springframework.data.mongodb.core.index: DEBUG
 spring:
   application:
     name: product-service
-
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: product-db
+      auto-index-creation: true
 ---
 spring.config.activate.on-profile: docker
 server.port: 8080
+spring:
+  data:
+    mongodb:
+      host: mongodb
